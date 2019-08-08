@@ -1,0 +1,15 @@
+ul.paginator
+	li.paginator__arrow
+		a.paginator-arrow(href="#")
+	- for (let i = 1; i <= 5; i++)
+		li
+			if (i == 1)
+				a.paginator__link.active(href="#")=i
+			else if (i == 4)
+				a.paginator__link(href="#") ...
+			else if (i == 5)
+				a.paginator__link(href="#") 22
+			else
+				a.paginator__link(href="#")=i
+	li.paginator__arrow
+		a.paginator-arrow(href="#")

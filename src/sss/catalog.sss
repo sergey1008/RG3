@@ -1,0 +1,137 @@
+.catalog
+
+	&__links
+		display: flex
+		justify-content: center
+
+		&-cont
+			border-bottom: 1px solid #f5f5f9
+			margin-bottom: 45px
+
+	&__link
+		position: relative
+		font-size: rem(15)
+		font-weight: 600
+		padding: 20px 10px
+
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 3px
+			border-color: transparent
+			transition: background-color .4s ease, transform .4s ease
+			transform: scaleX(0)
+
+
+
+		&:not(:last-child)
+			margin-right: 70px
+
+		&.active, &:hover, &:focus
+
+			&:after
+				background-color: var(--main-color)
+				transform: scaleX(1)
+
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -26px -24px
+
+	&__item
+		width: calc((100% - 24px * 4 ) / 4)
+		margin: 0 0 26px 24px
+		padding: 12px 12px 40px 12px
+		transition: box-shadow .4s ease
+
+		&:hover
+			box-shadow: var(--box-shadow)
+
+			.catalog__item
+				&-price
+					color: var(--main-color)
+
+				&-title
+					color: #000
+
+		img
+			display: block
+
+		&-img
+			margin-bottom: 25px
+
+
+		&-title
+			font-size: rem(16)
+			font-weight: bold
+			margin-bottom: 20px
+
+		&-text
+			font-size: rem(14)
+			color: #acacb2
+			margin-bottom: 20px
+
+		&-price
+			font-size: rem(16)
+			font-weight: bold
+			color: #acacb2
+			margin-top: auto
+			text-transform: uppercase
+			transition: color .4s ease
+
+@media screen and (max-width: 1200px)
+
+	.catalog
+
+		&__list
+			margin: 0 0 -20px -15px
+
+		&__item
+			width: calc((100% - 15px * 4 ) / 4)
+			margin: 0 0 20px 15px
+			padding: 12px 12px 20px 12px
+
+@media screen and (max-width: 1000px)
+
+
+	.catalog
+		&__links-cont
+			margin-bottom: 30px
+
+		&__item
+			width: calc((100% - 15px * 3 ) / 3)
+
+
+@media screen and (max-width: 660px)
+
+
+	.catalog
+		&__links
+			flex-direction: column
+
+			&-cont
+				padding-bottom: 20px
+
+		&__link
+			width: 100%
+			border: 1px solid #f5f5f9
+			text-align: center
+			padding: 15px 10px
+
+			&:not(:first-child)
+				border-top: 0
+
+			&.active
+				order: 1
+				background-color: var(--main-color)
+				color: #fff
+
+		&__item
+			width: 100%
+
+			img
+				width: 100%

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		
+		main#content
+			section.catalog-cont
+				.catalog__links-cont
+					.wrapper
+						.catalog__links
+							a(href="").catalog__link.active Готовые изделия
+							a(href="").catalog__link Складские материалы
+							a(href="").catalog__link Прикладные материалы
+				.wrapper
+					.catalog
+						
+						.catalog__list
+							- for (let i = 0; i < 3; i++)
+								each text, i in [{title: "Диван Алексия", price: "10 000 Руб."}, {title: "Диван-кровать Дионис", price: "30 000 Руб."}, {title: "Тахта Венеция", price: "12 500 Руб."}, {title: "Кровать антарктида", price: "45 500 Руб."}, {title: "Диван Амстердам", price: "14 500 Руб."},]
+									a(href="").catalog__item
+										figure.catalog__item-img
+											img(src="img/catalog-"+(i+1)+".jpg", alt="")
+										.catalog__item-info
+											.catalog__item-title=text.title
+											.catalog__item-text Начало повседневной работы по формированию позиции позволяет оценить значение.
+											.catalog__item-price=text.price
+
+
+
+
+		include inc/footer.pug
+		include inc/scripts.pug

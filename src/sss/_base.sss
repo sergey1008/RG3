@@ -1,0 +1,390 @@
+html
+	font-size: 100%
+
+input, a, button, textarea, select
+	outline: none
+
+*::-webkit-input-placeholder
+	color: #b4bac3
+	opacity: 1
+
+*:-moz-placeholder
+	color: #b4bac3
+	opacity: 1
+
+*::-moz-placeholder
+	color: #b4bac3
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #b4bac3
+	opacity: 1
+
+.slick-arrow
+	border: none
+	background: none
+	padding: 0
+	text-indent: -9999px
+	overflow: hidden
+
+.swiper-button-disabled
+	opacity: .5
+	pointer-events: none
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select, input[type="submit"], button
+	-webkit-appearance: none
+	appearance: none
+	font: inherit
+	border-radius: 0
+
+	&:focus
+
+		&::-webkit-input-placeholder
+			opacity: 0
+
+		&:-moz-placeholder
+			opacity: 0
+
+		&::-moz-placeholder
+			opacity: 0
+
+		&:-ms-input-placeholder
+			opacity: 0
+
+
+*, *:after, *:before
+	box-sizing: border-box
+
+*[v-cloak]
+	display: none
+
+.rub
+	// font-family: "Roboto"
+	font-style: normal
+	line-height: 1
+
+address
+	font-weight: inherit
+
+body
+	min-width: 320px
+	line-height: lh(24, 14)
+	font-family: var(--defaultFont)
+	font-weight: 400
+	font-size: 14px
+	background: #fff
+	color: #393939
+	position: relative
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	overflow-x: hidden
+	text-rendering: auto
+
+select
+	-webkit-appearance: none
+	/* for FF */
+	-moz-appearance: none
+	text-indent: 0.01px
+	text-overflow: ''
+	/* for IE */
+	-ms-appearance: none
+	appearance: none!important
+
+	&::-ms-expand 
+		display: none
+
+.head, .footer
+	flex: none
+
+
+#content
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+	z-index: 1
+	background: #fff
+
+a
+	color: #000
+	font-weight: inherit
+	text-decoration: none
+	transition: color .3s ease
+
+	&:not([class])
+		text-decoration: underline
+
+	&[href^="tel"], &[href^="mail"]
+		white-space: nowrap
+
+	&:hover, &:active
+		color: var(--main-color)
+
+
+.wrapper
+	// width: var(--baseWidth)
+	max-width: var(--baseWidth)
+	width: 100%
+	padding: 0 2rem
+	margin: 0 auto
+	box-sizing: content-box
+
+	&--min 
+		max-width: 1095px
+		padding: 0 2rem
+		margin: 0 auto
+		box-sizing: content-box
+
+	&--big
+		max-width: 1800px
+		padding: 0 2rem
+		margin: 0 auto
+		box-sizing: content-box
+
+input[type="submit"], button
+	cursor: pointer
+
+img, svg
+	max-width: 100%
+
+li
+	list-style: none
+
+.table-wrap
+	position: relative
+
+	&__track
+		overflow-x: auto
+		-webkit-overflow-scrolling: touch
+
+	&__shadow
+		width: 12px
+		position: absolute 0 *
+		pointer-events: none
+		background: linear-gradient(to right, rgba(0,0,0, .0005), rgba(225,225,225, .1))
+		opacity: 0
+
+		&--left
+			left: 0	
+			transform: rotateZ(180deg)
+
+		&--right
+			right: 0	
+
+
+.text-page, .inner-content__content .wrapper
+
+	> *:not(:first-child)
+		margin-bottom: rem(24)
+
+	strong
+		font-weight: bold
+
+	h2, h3, h4, h5, h6
+		font-weight: 600
+
+	h2
+		font-size: rem(24)
+		line-height: 1.6
+
+	h3
+		font-size: rem(22)
+		line-height: 1.6
+
+	h4
+		font-size: rem(20)
+		line-height: 1.5
+
+	h5
+		font-size: rem(18)
+		line-height: 1.4
+
+	h6
+		font-size: rem(17)
+		line-height: 1.4
+
+	blockquote
+		background: var(--secondColor)
+		padding: rem(28) rem(50) rem(28) rem(55)
+		line-height: lh(26, 14)
+
+		a
+			font-size: rem(16)
+			border-bottom: none
+			font-weight: bold
+
+	[align="right"]
+		float: right
+		margin-left: 80px
+
+	[align="left"]
+		float: left
+		margin-right: 80px
+
+	img[height]
+		height: auto
+
+	img[align]
+		margin-bottom: rem(22)
+
+	table
+
+		td, th
+			padding: 15px 23px
+			font-weight: 300
+
+			&:not([valign]), &[valign="middle"]
+				vertical-align: middle
+
+			&[valign="top"]
+				vertical-align: top
+
+			&[valign="bottom"]
+				vertical-align: bottom
+
+
+		&[border="1"]
+			td, th
+				border: 1px solid var(--border-color) !important
+
+		&[cellspacing]:not([cellspacing="1"]):not([cellspacing="0"])
+	table
+
+		td, th
+			// border: 1px solid var(--border-color)
+
+	ul, ol
+		list-style: none !important
+		// max-width: 720px !important
+
+	li
+		position: relative
+
+		&:not(:first-child)
+			margin: 6px 0 0
+
+		&:before
+			display: inline-block
+
+		ul, ol
+			margin-top: 0
+			margin-left: 10px
+
+		ul
+			li
+				&:before
+					content: ''
+
+
+		li
+			padding-left: 10px
+
+			&:before
+				margin-right: 10px !important
+
+			&:not(:first-child)
+				margin-top: 5px
+
+	ul
+
+		li
+			padding-left: 10px
+
+			&:before
+				content: ""
+				position: absolute
+				top: 11px
+				left: 0
+				size: 5px 1px 
+				background: currentColor
+				margin: 0 4px 0 0
+				display: inline-block
+
+			li
+				padding-left: 20px
+
+
+	
+	ol
+		counter-reset: i
+
+		& li
+			counter-increment: i
+
+			&:before
+				content: counter(i) "."
+				margin-right: 4px
+
+	table 
+		width: 100%
+
+
+	a 
+		color: currentColor
+
+
+.soc
+	display: flex
+	
+	&__link
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: var(--backgroundColor)
+		background-position: center
+		background-repeat: no-repeat
+		transition: background .3s ease, border-color .3s ease
+		border: 1px solid transparent
+
+
+		&:not(:last-child)
+			margin-right: 22px
+
+
+
+	img 
+		display: block
+
+
+
+@media screen and (max-width: 1500px)
+
+	.wrapper, .wrapper--min
+		box-sizing: border-box
+		width: 100%
+
+@media screen and (max-width: 1200px)
+
+
+
+	figure
+		&[align="right"], &[align="left"]
+			max-width: 450px
+
+@media screen and (max-width: 1000px)
+
+	figure
+		&[align="right"], &[align="left"]
+			max-width: 350px
+
+	.text-page h2
+		font-size: 2rem
+
+	.text-page 
+		table 
+			td, th
+				padding: 5px 10px
+
+
+@media screen and (max-width: 667px)
+	.wrapper
+		padding: 0 20px
+
+
+
+	figure
+		&[align="right"], &[align="left"]
+			max-width: 100%
+			margin-left: 0 !important
+			margin-bottom: 20px
