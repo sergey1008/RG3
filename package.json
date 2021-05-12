@@ -46,7 +46,7 @@
     "imports-loader": "^0.8.0",
     "jquery-ui": "^1.12.1",
     "null-loader": "^3.0.0",
-    "postcss": "^7.0.14",
+    "postcss": "^8.2.10",
     "postcss-assets": "^5.0.0",
     "postcss-attribute-case-insensitive": "^3.0.1",
     "postcss-flexbugs-fixes": "^4.1.0",
